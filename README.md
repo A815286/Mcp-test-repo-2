@@ -24,28 +24,32 @@ Built for developers who want to connect their AI tools to GitHub context and ca
 | 5      | cancel_workflow_run                    | Cancel a workflow run                                                                                                        | owner, repo, run_id                                |
 | 6      | create_and_submit_pull_request_review  | Create and submit a review for a pull request without review comments.                                                       | owner, repo, pullNumber, body, event               |
 | 7      | create_branch                          | Create a new branch in a GitHub repository                                                                                   | owner, repo, branch                                |
-| 8      | create_gist                            | Create a new gist
-     | filename, content                                  |
-| 9      | create_issue                           | Create a new issue in a GitHub repository.
-         | owner, repo, title                             |
-| 10     | create_or_update_file | Create or update a single file in a GitHub repository. If updating, you must provide the SHA of the file you want to update. | owner, repo, path, content, message, branch |
-| 11     | create_pending_pull_request_review | Create a pending review for a pull request. Call this first before attempting to add comments to a pending review, and ultimately submitting it. | owner, repo, pullNumber |
-| 12 | create_pull_request | Create a new pull request in a GitHub repository. | owner, repo, title, head, base |
-| 13 | create_repository | Create a new GitHub repository in your account | name |
-| 14 | delete_file | Delete a file from a GitHub repository | owner, repo, path, message, branch |
-| 15 | delete_pending_pull_request_review | Delete the requester's latest pending pull request review. | owner, repo, pullNumber |
-| 16 | delete_workflow_run_logs | Delete logs for a workflow run | owner, repo, run_id |
-| 17 | dismiss_notification | Dismiss a notification by marking it as read or done | threadID |
-| 18 | download_workflow_run_artifact | Get download URL for a workflow run artifact | owner, repo, artifact_id |
-| 19 | fork_repository | Fork a GitHub repository to your account or specified organization | owner, repo |
-| 20 | get_code_scanning_alert | Get details of a specific code scanning alert in a GitHub repository. | owner, repo, alertNumber |
-| 21 | get_commit | Get details for a commit from a GitHub repository | owner, repo, sha |
-| 22 | get_dependabot_alert | Get details of a specific dependabot alert in a GitHub repository. | owner, repo, alertNumber |
-| 23 | get_discussion | Get a specific discussion by ID | owner, repo, discussionNumber |
-| 24 | get_discussion_comments | Get comments from a discussion | owner, repo, discussionNumber |
-| 25 | get_file_contents | Get the contents of a file or directory from a GitHub repository | owner, repo |
-| 26 | get_issue | Get details of a specific issue in a GitHub repository. | owner, repo, issue_number |
-| 27 | get_issue_comments | Get comments for a specific issue in a GitHub repository. | owner, repo, issue_number |
+| 8      | create_gist                         | Create a new gist                                                                                                                                                                                           | filename, content                                       |
+| 9      | create_issue                        | Create a new issue in a GitHub repository.                                                                                                                                                                  | owner, repo, title                                     |
+| 10     | create_or_update_file               | Create or update a single file in a GitHub repository. If updating, you must provide the SHA of the file you want to update.                                                                                 | owner, repo, path, content, message, branch            |
+| 11     | create_pending_pull_request_review  | Create a pending review for a pull request. Call this first before attempting to add comments to a pending review, and ultimately submitting it.                                                            | owner, repo, pullNumber                                |
+| 12     | create_pull_request                 | Create a new pull request in a GitHub repository.                                                                                                                                                           | owner, repo, title, head, base                         |
+| 13     | create_repository                   | Create a new GitHub repository in your account                                                                                                                                                              | name                                                   |
+| 14     | delete_file                         | Delete a file from a GitHub repository                                                                                                                                                                      | owner, repo, path, message, branch                     |
+| 15     | delete_pending_pull_request_review  | Delete the requester's latest pending pull request review.                                                                                                                                                  | owner, repo, pullNumber                                |
+| 16     | delete_workflow_run_logs            | Delete logs for a workflow run                                                                                                                                                                              | owner, repo, run_id                                    |
+| 17     | dismiss_notification                | Dismiss a notification by marking it as read or done                                                                                                                                                        | threadID                                               |
+| 18     | download_workflow_run_artifact      | Get download URL for a workflow run artifact                                                                                                                                                                | owner, repo, artifact_id                               |
+| 19     | fork_repository                     | Fork a GitHub repository to your account or specified organization                                                                                                                                          | owner, repo                                            |
+| 20     | get_code_scanning_alert             | Get details of a specific code scanning alert in a GitHub repository.                                                                                                                                       | owner, repo, alertNumber                               |
+| 21     | get_commit                          | Get details for a commit from a GitHub repository                                                                                                                                                           | owner, repo, sha                                       |
+| 22     | get_dependabot_alert                | Get details of a specific dependabot alert in a GitHub repository.                                                                                                                                          | owner, repo, alertNumber                               |
+| 23     | get_discussion                      | Get a specific discussion by ID                                                                                                                                                                             | owner, repo, discussionNumber                          |
+| 24     | get_discussion_comments             | Get comments from a discussion                                                                                                                                                                              | owner, repo, discussionNumber                          |
+| 25     | get_file_contents                   | Get the contents of a file or directory from a GitHub repository                                                                                                                                            | owner, repo                                            |
+| 26     | get_issue                           | Get details of a specific issue in a GitHub repository.                                                                                                                                                     | owner, repo, issue_number                              |
+| 27     | get_issue_comments                  | Get comments for a specific issue in a GitHub repository.                                                                                                                                                   | owner, repo, issue_number                              |
+
+
+
+
+
+
 | 28 | get_job_logs | Download logs for a specific workflow job or efficiently get all failed job logs for a workflow run | owner, repo |
 | 29 | get_me | Get details of the authenticated GitHub user. | – |
 | 30 | get_notification_details | Get detailed information for a specific GitHub notification. | notificationID |
@@ -1147,3 +1151,4 @@ The exported Go API of this module should currently be considered unstable, and 
 
 
 This project is licensed under the terms of the MIT open source license. Please refer to [MIT](./LICENSE) for the full terms.
+
