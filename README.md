@@ -99,6 +99,92 @@ Built for developers who want to connect their AI tools to GitHub context and ca
 | 80     | update_pull_request_branch             | Update the branch of a pull request with the latest changes from the base branch. | owner, repo, pullNumber |
 
 ```
+
+```markdown
+| Sr.No. | Functionality                     | Description | Parameters |
+|--------|-----------------------------------|-------------|------------|
+| 1      | add_assignees                     | Add assignees to an issue | owner, repo, issue_number, assignees |
+| 2      | add_labels                        | Add labels to an issue | owner, repo, issue_number, labels |
+| 3      | check_run_rerun                   | Rerun a check run | owner, repo, check_run_id |
+| 4      | check_suite_rerequest             | Rerequest a check suite | owner, repo, check_suite_id |
+| 5      | close_issue                       | Close an existing issue in a GitHub repository. | owner, repo, issue_number |
+| 6      | close_pull_request                | Close a pull request in a GitHub repository. | owner, repo, pull_number |
+| 7      | code_scanning_list_alerts         | List code scanning alerts | owner, repo |
+| 8      | code_scanning_update_alert        | Update a code scanning alert | owner, repo, alert_number, state |
+| 9      | create_check_run                  | Create a new check run | owner, repo, name, head_sha |
+| 10     | create_check_suite                | Create a new check suite | owner, repo, head_sha |
+| 11     | create_commit_comment             | Create a commit comment | owner, repo, commit_sha, body |
+| 12     | create_discussion_comment         | Create a comment on a discussion | owner, repo, discussion_number, body |
+| 13     | create_gist                       | Create a new gist | description, public, files |
+| 14     | create_hook                       | Create a webhook | owner, repo, config, events, active |
+| 15     | create_issue                      | Create a new issue in a GitHub repository. | owner, repo, title |
+| 16     | create_label                      | Create a label | owner, repo, name, color, description |
+| 17     | create_milestone                  | Create a milestone | owner, repo, title, state, description, due_on |
+| 18     | create_pull_request               | Create a new pull request in a GitHub repository. | owner, repo, head, base, title |
+| 19     | create_release                    | Create a release | owner, repo, tag_name, name, body |
+| 20     | create_review_comment             | Create a review comment | owner, repo, pull_number, body, commit_id, path, position |
+| 21     | create_team                       | Create a new team in an organization | org, name, description, privacy |
+| 22     | delete_gist                       | Delete a gist | gist_id |
+| 23     | delete_hook                       | Delete a webhook | owner, repo, hook_id |
+| 24     | delete_label                      | Delete a label | owner, repo, name |
+| 25     | delete_milestone                  | Delete a milestone | owner, repo, milestone_number |
+| 26     | delete_release                    | Delete a release | owner, repo, release_id |
+| 27     | delete_team                       | Delete a team | org, team_id |
+| 28     | get_check_run                     | Get a single check run | owner, repo, check_run_id |
+| 29     | get_check_suite                   | Get a single check suite | owner, repo, check_suite_id |
+| 30     | get_code_scanning_alert           | Get a code scanning alert | owner, repo, alert_number |
+| 31     | get_commit                        | Get a single commit | owner, repo, commit_sha |
+| 32     | get_discussion                    | Get a discussion | owner, repo, discussion_number |
+| 33     | get_gist                          | Get a gist | gist_id |
+| 34     | get_hook                          | Get a webhook | owner, repo, hook_id |
+| 35     | get_issue                         | Get a single issue | owner, repo, issue_number |
+| 36     | get_label                         | Get a label | owner, repo, name |
+| 37     | get_milestone                     | Get a milestone | owner, repo, milestone_number |
+| 38     | get_pull_request                  | Get a pull request | owner, repo, pull_number |
+| 39     | get_release                       | Get a release | owner, repo, release_id |
+| 40     | get_team                          | Get a team | org, team_id |
+| 41     | issues_add_comment                | Add a comment to an issue | owner, repo, issue_number, body |
+| 42     | list_assignees                    | List assignees | owner, repo |
+| 43     | list_check_runs                   | List check runs for a reference | owner, repo, ref |
+| 44     | list_check_suites                 | List check suites for a reference | owner, repo, ref |
+| 45     | list_code_scanning_alerts         | List code scanning alerts | owner, repo |
+| 46     | list_commits                      | List commits | owner, repo |
+| 47     | list_discussion_comments          | List discussion comments | owner, repo, discussion_number |
+| 48     | list_discussions                  | List discussions | owner, repo |
+| 49     | list_gists                        | List gists | username |
+| 50     | list_hooks                        | List webhooks | owner, repo |
+| 51     | list_issues                       | List issues in a GitHub repository. | owner, repo |
+| 52     | list_labels                       | List labels | owner, repo |
+| 53     | list_milestones                   | List milestones | owner, repo |
+| 54     | list_pull_requests                | List pull requests | owner, repo |
+| 55     | list_releases                     | List releases | owner, repo |
+| 56     | list_teams                        | List teams in an organization | org |
+| 57     | merge_pull_request                | Merge a pull request | owner, repo, pull_number |
+| 58     | remove_assignees                  | Remove assignees from an issue | owner, repo, issue_number, assignees |
+| 59     | remove_label                      | Remove a label from an issue | owner, repo, issue_number, name |
+| 60     | reopen_issue                      | Reopen a closed issue | owner, repo, issue_number |
+| 61     | reopen_pull_request               | Reopen a closed pull request | owner, repo, pull_number |
+| 62     | request_reviewers                 | Request reviewers for a pull request | owner, repo, pull_number, reviewers |
+| 63     | review_pull_request               | Review a pull request | owner, repo, pull_number, body, event |
+| 64     | search_code                       | Search code | query |
+| 65     | search_commits                    | Search commits | query |
+| 66     | search_issues                     | Search issues | query |
+| 67     | search_labels                     | Search labels | query |
+| 68     | search_repositories               | Search repositories | query |
+| 69     | search_topics                     | Search topics | query |
+| 70     | search_users                      | Search users | query |
+| 71     | set_team_permission               | Set team permission for a repository | org, team_id, owner, repo, permission |
+| 72     | submit_pending_pull_request_review | Submit the requester's latest pending pull request review, normally this is a final step after creating a pending review, adding comments first, unless you know that the user already did the first two steps, you should check before calling this. | owner, repo, pullNumber, event |
+| 73     | update_gist                       | Update an existing gist | gist_id, filename, content |
+| 74     | update_issue                      | Update an existing issue in a GitHub repository. | owner, repo, issue_number |
+| 75     | update_pull_request               | Update an existing pull request in a GitHub repository. | owner, repo, pullNumber |
+| 76     | update_pull_request_branch        | Update the branch of a pull request with the latest changes from the base branch. | owner, repo, pullNumber |
+| 77     | update_release                    | Update a release | owner, repo, release_id, tag_name, name, body |
+| 78     | update_team                       | Update a team | org, team_id, name, description, privacy |
+| 79     | watch_repository                  | Watch (star) a repository | owner, repo |
+| 80     | workflow_dispatch                 | Trigger a GitHub Actions workflow_dispatch event. | owner, repo, workflow_id, ref |
+```
+
 ## Remote GitHub MCP Server
 
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=github&config=%7B%22type%22%3A%20%22http%22%2C%22url%22%3A%20%22https%3A%2F%2Fapi.githubcopilot.com%2Fmcp%2F%22%7D) [![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Install_Server-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=github&config=%7B%22type%22%3A%20%22http%22%2C%22url%22%3A%20%22https%3A%2F%2Fapi.githubcopilot.com%2Fmcp%2F%22%7D&quality=insiders)
@@ -1162,6 +1248,7 @@ The exported Go API of this module should currently be considered unstable, and 
 
 
 This project is licensed under the terms of the MIT open source license. Please refer to [MIT](./LICENSE) for the full terms.
+
 
 
 
