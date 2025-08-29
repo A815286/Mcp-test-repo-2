@@ -44,50 +44,61 @@ Built for developers who want to connect their AI tools to GitHub context and ca
 | 25     | get_file_contents                   | Get the contents of a file or directory from a GitHub repository                                                                                                                                            | owner, repo                                            |
 | 26     | get_issue                           | Get details of a specific issue in a GitHub repository.                                                                                                                                                     | owner, repo, issue_number                              |
 | 27     | get_issue_comments                  | Get comments for a specific issue in a GitHub repository.                                                                                                                                                   | owner, repo, issue_number                              |
-
-
-
-
-
-
-| 28 | get_job_logs | Download logs for a specific workflow job or efficiently get all failed job logs for a workflow run | owner, repo |
-| 29 | get_me | Get details of the authenticated GitHub user. | – |
-| 30 | get_notification_details | Get detailed information for a specific GitHub notification. | notificationID |
-| 31 | get_pull_request | Get details of a specific pull request in a GitHub repository. | owner, repo, pullNumber |
-| 32 | get_pull_request_comments | Get comments for a specific pull request. | owner, repo, pullNumber |
-| 33 | get_pull_request_diff | Get the diff of a pull request. | owner, repo, pullNumber |
-| 34 | get_pull_request_files | Get the files changed in a specific pull request. | owner, repo, pullNumber |
-| 35 | get_pull_request_reviews | Get reviews for a specific pull request. | owner, repo, pullNumber |
-| 36 | get_pull_request_status | Get the status of a specific pull request. | owner, repo, pullNumber |
-| 37 | get_secret_scanning_alert | Get details of a specific secret scanning alert in a GitHub repository. | owner, repo, alertNumber |
-| 38 | get_tag | Get details about a specific git tag in a GitHub repository | owner, repo, tag |
-| 39 | get_workflow_run | Get details of a specific workflow run | owner, repo, run_id |
-| 40 | get_workflow_run_logs | Download logs for a specific workflow run (EXPENSIVE: downloads ALL logs as ZIP. Consider using get_job_logs with failed_only=true for debugging failed jobs) | owner, repo, run_id |
-| 41 | get_workflow_run_usage | Get usage metrics for a workflow run | owner, repo, run_id |
-| 42 | list_branches | List branches in a GitHub repository | owner, repo |
-| 43 | list_code_scanning_alerts | List code scanning alerts in a GitHub repository. | owner, repo |
-| 44 | list_commits | Get list of commits of a branch in a GitHub repository. | owner, repo |
-| 45 | list_dependabot_alerts | List dependabot alerts in a GitHub repository. | owner, repo |
-| 46 | list_discussion_categories | List discussion categories with their id and name, for a repository | owner, repo |
-| 47 | list_discussions | List discussions for a repository or organisation. | owner |
-| 48 | list_gists | List gists for a user | – |
-| 49 | list_issues | List issues in a GitHub repository. | owner, repo |
-| 50 | list_notifications | Lists all GitHub notifications for the authenticated user. | – |
-| 51 | list_pull_requests | List pull requests in a GitHub repository. | owner, repo |
-| 52 | list_secret_scanning_alerts | List secret scanning alerts in a GitHub repository. | owner, repo |
-| 53 | list_sub_issues | List sub-issues for a specific issue in a GitHub repository. | owner, repo ,issue_number |
-| 54 | list_tags | List git tags in a GitHub repository | owner, repo |
-
-
-
-
-
-
+| 28     | get_job_logs                 | Download logs for a specific workflow job or efficiently get all failed job logs for a workflow run                                                                                                         | owner, repo                                    |
+| 29     | get_me                       | Get details of the authenticated GitHub user.                                                                                                                                                               | –                                               |
+| 30     | get_notification_details     | Get detailed information for a specific GitHub notification.                                                                                                                                                | notificationID                                  |
+| 31     | get_pull_request             | Get details of a specific pull request in a GitHub repository.                                                                                                                                              | owner, repo, pullNumber                         |
+| 32     | get_pull_request_comments    | Get comments for a specific pull request.                                                                                                                                                                   | owner, repo, pullNumber                         |
+| 33     | get_pull_request_diff        | Get the diff of a pull request.                                                                                                                                                                             | owner, repo, pullNumber                         |
+| 34     | get_pull_request_files       | Get the files changed in a specific pull request.                                                                                                                                                           | owner, repo, pullNumber                         |
+| 35     | get_pull_request_reviews     | Get reviews for a specific pull request.                                                                                                                                                                    | owner, repo, pullNumber                         |
+| 36     | get_pull_request_status      | Get the status of a specific pull request.                                                                                                                                                                  | owner, repo, pullNumber                         |
+| 37     | get_secret_scanning_alert    | Get details of a specific secret scanning alert in a GitHub repository.                                                                                                                                     | owner, repo, alertNumber                        |
+| 38     | get_tag                      | Get details about a specific git tag in a GitHub repository                                                                                                                                                 | owner, repo, tag                                |
+| 39     | get_workflow_run             | Get details of a specific workflow run                                                                                                                                                                      | owner, repo, run_id                             |
+| 40     | get_workflow_run_logs        | Download logs for a specific workflow run (EXPENSIVE: downloads ALL logs as ZIP. Consider using get_job_logs with failed_only=true for debugging failed jobs)                                               | owner, repo, run_id                             |
+| 41     | get_workflow_run_usage       | Get usage metrics for a workflow run                                                                                                                                                                        | owner, repo, run_id                             |
+| 42     | list_branches                | List branches in a GitHub repository                                                                                                                                                                        | owner, repo                                    |
+| 43     | list_code_scanning_alerts    | List code scanning alerts in a GitHub repository.                                                                                                                                                           | owner, repo                                    |
+| 44     | list_commits                 | Get list of commits of a branch in a GitHub repository.                                                                                                                                                     | owner, repo                                    |
+| 45     | list_dependabot_alerts       | List dependabot alerts in a GitHub repository.                                                                                                                                                              | owner, repo                                    |
+| 46     | list_discussion_categories   | List discussion categories with their id and name, for a repository                                                                                                                                         | owner, repo                                    |
+| 47     | list_discussions             | List discussions for a repository or organisation.                                                                                                                                                          | owner                                           |
+| 48     | list_gists                   | List gists for a user                                                                                                                                                                                       | –                                               |
+| 49     | list_issues                  | List issues in a GitHub repository.                                                                                                                                                                         | owner, repo                                    |
+| 50     | list_notifications           | Lists all GitHub notifications for the authenticated user.                                                                                                                                                  | –                                               |
+| 51     | list_pull_requests           | List pull requests in a GitHub repository.                                                                                                                                                                  | owner, repo                                    |
+| 52     | list_secret_scanning_alerts  | List secret scanning alerts in a GitHub repository.                                                                                                                                                         | owner, repo                                    |
+| 53     | list_sub_issues              | List sub-issues for a specific issue in a GitHub repository.                                                                                                                                                | owner, repo, issue_number                       |
+| 54     | list_tags                    | List git tags in a GitHub repository                                                                                                                                                                        | owner, repo                                    |
+| 55     | list_workflow_jobs                     | List jobs for a specific workflow run                                                                                                        | owner, repo, run_id                        |
+| 56     | list_workflow_run_artifacts            | List artifacts for a workflow run                                                                                                            | owner, repo, run_id                        |
+| 57     | list_workflow_runs                     | List workflow runs for a specific workflow                                                                                                   | owner, repo, workflow_id                   |
+| 58     | list_workflows                         | List workflows in a repository                                                                                                               | owner, repo                                |
+| 59     | manage_notification_subscription       | Manage a notification subscription: ignore, watch, or delete a notification thread subscription.                                             | notificationID, action                     |
+| 60     | manage_repository_notification_subscription | Manage a repository notification subscription: ignore, watch, or delete repository notifications subscription for the provided repository. | owner, repo, action                        |
+| 61     | mark_all_notifications_read            | Mark all notifications as read                                                                                                               | -                                         |
+| 62     | merge_pull_request                     | Merge a pull request in a GitHub repository.                                                                                                 | owner, repo, pullNumber                    |
+| 63     | push_files                             | Push multiple files to a GitHub repository in a single commit                                                                                | owner, repo, branch, files, message        |
+| 64     | remove_sub_issue                       | Remove a sub-issue from a parent issue in a GitHub repository.                                                                               | owner, repo, issue_number, sub_issue_id    |
+| 65     | reprioritize_sub_issue                 | Reprioritize a sub-issue to a different position in the parent issue's sub-issue list.                                                       | owner, repo, issue_number, sub_issue_id    |
+| 66     | request_copilot_review                 | Request a GitHub Copilot code review for a pull request.                                                                                     | owner, repo, pullNumber                    |
+| 67     | rerun_failed_jobs                      | Re-run only the failed jobs in a workflow run                                                                                                | owner, repo, run_id                        |
+| 68     | rerun_workflow_run                     | Re-run an entire workflow run                                                                                                                | owner, repo, run_id                        |
+| 69     | run_workflow                           | Run an Actions workflow by workflow ID or filename                                                                                           | owner, repo, workflow_id, ref              |
+| 70     | search_code                            | Fast and precise code search across ALL GitHub repositories using GitHub's native search engine.                                              | query                                      |
+| 71     | search_issues                          | Search for issues in GitHub repositories using issues search syntax already scoped to is:issue                                               | query                                      |
+| 72     | search_orgs                            | Find GitHub organizations by name, location, or other organization metadata.                                                                 | query                                      |
+| 73     | search_pull_requests                   | Search for pull requests in GitHub repositories using issues search syntax already scoped to is:pr                                           | query                                      |
+| 74     | search_repositories                    | Find GitHub repositories by name, description, readme, topics, or other metadata.                                                            | query                                      |
+| 75     | search_users                           | Find GitHub users by username, real name, or other profile information.                                                                      | query                                      |
+| 76     | submit_pending_pull_request_review | Submit the requester's latest pending pull request review, normally this is a final step after creating a pending review, adding comments first, unless you know that the user already did the first two steps, you should check before calling this. | owner, repo, pullNumber, event |
+| 77     | update_gist                        | Update an existing gist | gist_id, filename, content |
+| 78     | update_issue                       | Update an existing issue in a GitHub repository. | owner, repo, issue_number |
+| 79     | update_pull_request                | Update an existing pull request in a GitHub repository. | owner, repo, pullNumber |
+| 80     | update_pull_request_branch         | Update the branch of a pull request with the latest changes from the base branch. | owner, repo, pullNumber |
 
 ```
-
-
-
 ## Remote GitHub MCP Server
 
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=github&config=%7B%22type%22%3A%20%22http%22%2C%22url%22%3A%20%22https%3A%2F%2Fapi.githubcopilot.com%2Fmcp%2F%22%7D) [![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Install_Server-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=github&config=%7B%22type%22%3A%20%22http%22%2C%22url%22%3A%20%22https%3A%2F%2Fapi.githubcopilot.com%2Fmcp%2F%22%7D&quality=insiders)
@@ -1151,4 +1162,5 @@ The exported Go API of this module should currently be considered unstable, and 
 
 
 This project is licensed under the terms of the MIT open source license. Please refer to [MIT](./LICENSE) for the full terms.
+
 
