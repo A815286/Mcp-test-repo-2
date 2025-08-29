@@ -24,8 +24,6 @@ Built for developers who want to connect their AI tools to GitHub context and ca
 | 5      | cancel_workflow_run                    | Cancel a workflow run                                                                                                        | owner, repo, run_id                                |
 | 6      | create_and_submit_pull_request_review  | Create and submit a review for a pull request without review comments.                                                       | owner, repo, pullNumber, body, event               |
 | 7      | create_branch                          | Create a new branch in a GitHub repository                                                                                   | owner, repo, branch                                |
-| Sr.No. | Functionality | Description | Parameters |
-|--------|-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
 | 8 | create_gist | Create a new gist | filename, content |
 | 9 | create_issue | Create a new issue in a GitHub repository. | owner, repo, title |
 | 10 | create_or_update_file | Create or update a single file in a GitHub repository. If updating, you must provide the SHA of the file you want to update. | owner, repo, path, content, message, branch |
@@ -46,8 +44,6 @@ Built for developers who want to connect their AI tools to GitHub context and ca
 | 25 | get_file_contents | Get the contents of a file or directory from a GitHub repository | owner, repo |
 | 26 | get_issue | Get details of a specific issue in a GitHub repository. | owner, repo, issue_number |
 | 27 | get_issue_comments | Get comments for a specific issue in a GitHub repository. | owner, repo, issue_number |
-| Sr.No. | Functionality | Description | Parameters |
-|--------|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
 | 28 | get_job_logs | Download logs for a specific workflow job or efficiently get all failed job logs for a workflow run | owner, repo |
 | 29 | get_me | Get details of the authenticated GitHub user. | – |
 | 30 | get_notification_details | Get detailed information for a specific GitHub notification. | notificationID |
