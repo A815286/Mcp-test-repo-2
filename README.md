@@ -42,12 +42,9 @@ Built for developers who want to connect their AI tools to GitHub context and ca
 | 23     | get_discussion                         | Get a specific discussion by ID                                                                                              | owner, repo, discussionNumber                          |
 | 24     | get_discussion_comments                | Get comments from a discussion                                                                                               | owner, repo, discussionNumber                          |
 | 25     | get_file_contents                      | Get the contents of a file or directory from a GitHub repository                                                             | owner, repo                                            |
-| 26     | get_issue                              | Get details of a specific issue in a GitHub repository.
-     | owner, repo, issue_number                              |
-| 27     | get_issue_comments                     | Get comments for a specific issue in a GitHub repository.
-     | owner, repo, issue_number                              |
-| 28     | get_job_logs                           | Download logs for a specific workflow job or efficiently get all failed job logs for a workflow run
-     | owner, repo                                            |
+| 26     | get_issue                              | Get details of a specific issue in a GitHub repository.                                                                      | owner, repo, issue_number                              |
+| 27     | get_issue_comments                     | Get comments for a specific issue in a GitHub repository.                                                                    | owner, repo, issue_number                              |
+| 28     | get_job_logs                           | Download logs for a specific workflow job or efficiently get all failed job logs for a workflow run                          | owner, repo                                            |
 | 29     | get_me                                 | Get details of the authenticated GitHub user.                                                                                | –                                                      |
 | 30     | get_notification_details               | Get detailed information for a specific GitHub notification.                                                                 | notificationID                                         |
 | 31     | get_pull_request                       | Get details of a specific pull request in a GitHub repository.                                                               | owner, repo, pullNumber                                |
@@ -96,14 +93,10 @@ Built for developers who want to connect their AI tools to GitHub context and ca
 | 74     | search_repositories                    | Find GitHub repositories by name, description, readme, topics, or other metadata.                                            | query                                          |
 | 75     | search_users                           | Find GitHub users by username, real name, or other profile information.                                                      | query                                          |
 | 76     | submit_pending_pull_request_review     | Submit the requester's latest pending pull request review, normally this is a final step after creating a pending review, adding comments first, unless you know that the user already did the first two steps, you should check before calling this. | owner, repo, pullNumber, event |
-| 77     | update_gist                            | Update an existing gist
-     | gist_id, filename, content                     |
-| 78     | update_issue                           | Update an existing issue in a GitHub repository.
-     | owner, repo, issue_number                      |
-| 79     | update_pull_request                    | Update an existing pull request in a GitHub repository.
-     | owner, repo, pullNumber                        |
-| 80     | update_pull_request_branch             | Update the branch of a pull request with the latest changes from the base branch.
-     | owner, repo, pullNumber                        |
+| 77     | update_gist                            | Update an existing gist                                                                                                      | gist_id, filename, content                     |
+| 78     | update_issue                           | Update an existing issue in a GitHub repository.                                                                             | owner, repo, issue_number                      |
+| 79     | update_pull_request                    | Update an existing pull request in a GitHub repository.                                                                      | owner, repo, pullNumber                        |
+| 80     | update_pull_request_branch             | Update the branch of a pull request with the latest changes from the base branch.                                            | owner, repo, pullNumber                        |
 
 ```
 
@@ -1170,6 +1163,7 @@ The exported Go API of this module should currently be considered unstable, and 
 
 
 This project is licensed under the terms of the MIT open source license. Please refer to [MIT](./LICENSE) for the full terms.
+
 
 
 
