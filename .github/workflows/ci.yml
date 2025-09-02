@@ -1,0 +1,15 @@
+name: CI Test Workflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # allows manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run test script
+        run: echo "Hello from GitHub Actions"
